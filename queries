@@ -43,3 +43,10 @@ postgres=# select * from Company;
  E          | Ford
  F          | Maruti
 (5 rows)
+select deatails.Cheack_no,deatails.date,deatails.amount, Company.company_name from Company INNER JOIN deatails on deatails.comapany_id = Company.Company_id;
+ cheack_no |    date    | amount | company_name
+-----------+------------+--------+--------------
+ SBI1234   | 2020-01-18 |  19877 | Toyota
+ HDFC7612  | 2020-09-09 |  45261 | Toyota
+ ICICI1010 | 2020-12-12 |  10298 | Ford
+(3 rows)
