@@ -1,0 +1,45 @@
+create database detail;
+CREATE DATABASE
+postgres=# create table deatails(Cheack_no text,Comapany_id text,Date DATE,Amount integer);
+CREATE TABLE
+insert into deatails(Cheack_no ,Comapany_id ,Date ,Amount) values('SBI1234','B','18/01/2020','19877');
+INSERT 0 1
+postgres=# insert into deatails(Cheack_no ,Comapany_id ,Date ,Amount) values('AXIS2476','D','23/05/2020','20876');
+INSERT 0 1
+postgres=# insert into deatails(Cheack_no ,Comapany_id ,Date ,Amount) values('HDFC7612','B','09/09/2020','45261');
+INSERT 0 1
+postgres=# insert into deatails(Cheack_no ,Comapany_id ,Date ,Amount) values('ICICI1010','E','12/12/2020','10298');
+INSERT 0 1
+postgres=# select * from deatails;
+ cheack_no | comapany_id |    date    | amount
+-----------+-------------+------------+--------
+ SBI1234   | B           | 2020-01-18 |  19877
+ AXIS2476  | D           | 2020-05-23 |  20876
+ HDFC7612  | B           | 2020-09-09 |  45261
+ ICICI1010 | E           | 2020-12-12 |  10298
+(4 rows)
+ create table Company(Company_id text,Company_name VARCHAR(50));
+CREATE TABLE
+postgres=# insert into Company(Company_id,Company_name) values('A','Hyundai');
+INSERT 0 1
+postgres=# insert into Company(Company_id,Company_name) values('B','Toyota');
+INSERT 0 1
+postgres=# insert into Company(Company_id,Company_name) values('C','Tata');
+INSERT 0 1
+postgres=# insert into Company(Company_id,Company_name) values('D','Ford');
+INSERT 0 1
+postgres=# insert into Company(Company_id,Company_name) values('E','Ford');
+INSERT 0 1
+postgres=# insert into Company(Company_id,Company_name) values('F','Maruti');
+INSERT 0 1
+postgres=# delete from Company WHERE Company_id = 'D';
+DELETE 1
+postgres=# select * from Company;
+ company_id | company_name
+------------+--------------
+ A          | Hyundai
+ B          | Toyota
+ C          | Tata
+ E          | Ford
+ F          | Maruti
+(5 rows)
